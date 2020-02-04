@@ -11,19 +11,253 @@ const btn9 = $("#save-9")
 const button = $(".button")
 
 var text1 = $("#1")
+var text2 = $("#2")
+var text3 = $("#3")
+var text4 = $("#4")
+var text5 = $("#5")
+var text6 = $("#6")
+var text7 = $("#7")
+var text8 = $("#8")
+var text9 = $("#9")
 
-function populateSchedule(){
-    var task = localStorage.getItem("save-1")
-    $(text1).val(task)
-    
+var task1 = localStorage.getItem("save-1")
+var task2 = localStorage.getItem("save-2")
+var task3 = localStorage.getItem("save-3")
+var task4 = localStorage.getItem("save-4")
+var task5 = localStorage.getItem("save-5")
+var task6 = localStorage.getItem("save-6")
+var task7 = localStorage.getItem("save-7")
+var task8 = localStorage.getItem("save-8")
+var task9 = localStorage.getItem("save-9")
+
+function populateSchedule() {
+    $(text1).val(task1)
+    $(text2).val(task2)
+    $(text3).val(task3)
+    $(text4).val(task4)
+    $(text5).val(task5)
+    $(text6).val(task6)
+    $(text7).val(task7)
+    $(text8).val(task8)
+    $(text9).val(task9)
 }
 
-$(btn1).on("click", function(event){
-    event.preventDefault()
+$(btn1).on("click", function (event) {
+ 
     localStorage.setItem($(this).val(), text1.val())
-    
-    console.log(task)
-    console.log($(text1).innerhtml = task)
+})
+$(btn2).on("click", function (event) {
+    localStorage.setItem($(this).val(), text2.val())
+})
+$(btn3).on("click", function (event) {
+    localStorage.setItem($(this).val(), text3.val())
+})
+$(btn4).on("click", function (event) {
+    localStorage.setItem($(this).val(), text4.val())
+})
+$(btn5).on("click", function (event) {
+    localStorage.setItem($(this).val(), text5.val())
+})
+$(btn6).on("click", function (event) {
+    localStorage.setItem($(this).val(), text6.val())
+})
+$(btn7).on("click", function (event) {
+    localStorage.setItem($(this).val(), text7.val())
+})
+$(btn8).on("click", function (event) {
+    localStorage.setItem($(this).val(), text8.val())
+})
+$(btn9).on("click", function (event) {
+    localStorage.setItem($(this).val(), text9.val())
+})
+
+$("#clear").on("click", function (event) {
+    localStorage.clear()
+    populateSchedule()
 })
 
 populateSchedule()
+
+var time = moment().format('MMMM Do, h:mm a')
+
+function displayTime() {
+    $("<p>").text(time).appendTo("#time-display")
+
+
+}
+
+displayTime()
+
+if (moment().hour() < 9) {
+    text1.classList.add(`future`)
+    text2.classList.add(`future`)
+    text3.classList.add(`future`)
+    text4.classList.add(`future`)
+    text5.classList.add(`future`)
+    text6.classList.add(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+} 
+if (moment().hour() == 9) {
+    text1.classList.add(`present`)
+    text2.classList.add(`future`)
+    text3.classList.add(`future`)
+    text4.classList.add(`future`)
+    text5.classList.add(`future`)
+    text6.classList.add(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+} 
+if (moment().hour() == 10) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`present`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`future`)
+    text4.classList.add(`future`)
+    text5.classList.add(`future`)
+    text6.classList.add(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+} 
+if (moment().hour() == 11) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`present`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`future`)
+    text5.classList.add(`future`)
+    text6.classList.add(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+}
+if (moment().hour() == 12) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`present`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`future`)
+    text6.classList.add(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+}
+if (moment().hour() == 13) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`past`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`present`)
+    text5.classList.remove(`future`)
+    text6.classList.add(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+}
+if (moment().hour() == 14) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`past`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`past`)
+    text5.classList.remove(`future`)
+    text6.classList.add(`present`)
+    text6.classList.remove(`future`)
+    text7.classList.add(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+}
+if (moment().hour() == 15) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`past`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`past`)
+    text5.classList.remove(`future`)
+    text6.classList.add(`past`)
+    text6.classList.remove(`future`)
+    text7.classList.add(`present`)
+    text7.classList.remove(`future`)
+    text8.classList.add(`future`)
+    text9.classList.add(`future`)
+}
+if (moment().hour() == 16) {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`past`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`past`)
+    text5.classList.remove(`future`)
+    text6.classList.add(`past`)
+    text6.classList.remove(`future`)
+    text7.classList.add(`past`)
+    text7.classList.remove(`future`)
+    text8.classList.add(`present`)
+    text8.classList.remove(`future`)
+    text9.classList.add(`future`)
+}
+if (moment().hour() == 17){
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`past`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`past`)
+    text5.classList.remove(`future`)
+    text6.classList.add(`past`)
+    text6.classList.remove(`future`)
+    text7.classList.add(`past`)
+    text7.classList.remove(`future`)
+    text8.classList.add(`past`)
+    text8.classList.remove(`future`)
+    text9.classList.add(`present`)
+    text9.classList.remove(`future`)
+} else {
+    text1.classList.add(`past`)
+    text1.classList.remove(`future`)
+    text2.classList.add(`past`)
+    text2.classList.remove(`future`)
+    text3.classList.add(`past`)
+    text3.classList.remove(`future`)
+    text4.classList.add(`past`)
+    text4.classList.remove(`future`)
+    text5.classList.add(`past`)
+    text5.classList.remove(`future`)
+    text6.classList.add(`past`)
+    text6.classList.remove(`future`)
+    text7.classList.add(`past`)
+    text7.classList.remove(`future`)
+    text8.classList.add(`past`)
+    text8.classList.remove(`future`)
+    text9.classList.add(`past`)
+    text9.classList.remove(`future`)
+} 

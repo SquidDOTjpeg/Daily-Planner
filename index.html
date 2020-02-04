@@ -23,128 +23,125 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="./Assets/moment.js"></script>
+
 </head>
+
 <body>
-<h1>Daily Planner</h1>
-<div class="wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>9AM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="1" type="text">
+    <h1>Daily Planner</h1>
+    <div id="time-display">
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>9AM</h2>
+                </div>
+                <div class="col-sm-9">
+                    <input class="text-boxes" id="1" type="text">
                     <button class="button" id="save-1" value="save-1">Save</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>10AM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="2" type="text">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>10AM</h2>
+                </div>
+                <div class="col-sm-9">
+                    <input class="text-boxes" id="2" type="text">
                     <button class="button" id="save-2" value="save-2">Save</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>11AM</h2>
+                </div>
+                <div class="col-sm-9">
+                    <input class="text-boxes" id="3" type="text">
+                    <button class="button" value="save-3" id="save-3">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>12AM</h2>
+                </div>
+                <div class="col-sm-9">
+                    <input class="text-boxes" id="4" type="text">
+                    <button class="button" value="save-4" id="save-4">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>1PM</h2>
+                </div>
+                <div class="col-sm-9">
+                    <input class="text-boxes" id="5" type="text">
+                    <button class="button" value="save-5" id="save-5">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>2PM</h2>
+                </div>
+                <div class="col-sm-9">
+
+                    <input class="text-boxes" id="6" type="text">
+                    <button class="button" value="save-6" id="save-6">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>3PM</h2>
+                </div>
+                <div class="col-sm-9">
+
+                    <input class="text-boxes" id="7" type="text">
+                    <button class="button" value="save-7" id="save-7">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>4PM</h2>
+                </div>
+                <div class="col-sm-9">
+
+                    <input class="text-boxes" id="8" type="text">
+                    <button class="button" value="save-8" id="save-8">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>5PM</h2>
+                </div>
+                <div class="col-sm-9">
+
+                    <input class="text-boxes" id="9" type="text">
+                    <button class="button" value="save-9" id="save-9">Save</button>
+                </div>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-sm-3">
-                <h2>11AM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="3" type="text">
-                    <button class="button" id="save-3">Save</button>
-                </form>
+            <div class="col-sm-12 mx-auto">
+                <button class="button" id="clear">Clear</button>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>12AM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="4" type="text">
-                    <button class="button" id="save-4">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>1PM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="5" type="text">
-                    <button class="button" id="save-5">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>2PM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="6" type="text">
-                    <button class="button" id="save-6">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>3PM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="7" type="text">
-                    <button class="button" id="save-7">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>4PM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="8" type="text">
-                    <button class="button" id="save-8">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>5PM</h2>
-            </div>
-            <div class="col-sm-9">
-                <form>
-                    <input id="9" type="text">
-                    <button class="button" id="save-9">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 
 </html>
