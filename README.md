@@ -1,5 +1,7 @@
 # Daily-Planner
 
+A Planner for your day that allows you to plan by the hours in your day. Useful for time management.
+
 # Change Log: February 2
 Added the time slots to the html with a form for submission of times and events
 
