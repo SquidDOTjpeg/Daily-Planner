@@ -8,11 +8,11 @@ Simple design with straight forward UI. The site allows you to store tasks for t
 
 ## Technologies
 
-HTML
-CSS
-Javascript
-Moment.js
-Bootstrap
+- HTML
+- CSS
+- Javascript
+- Moment.js
+- Bootstrap
 
 # Deployed Site
 
